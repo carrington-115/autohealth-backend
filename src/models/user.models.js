@@ -14,6 +14,14 @@ const users = new Schema(
       type: String,
       required: true,
     },
+    dob: {
+      type: Date,
+      required: false,
+    },
+    gender: {
+      type: String,
+      required: false,
+    },
     timestamp: {
       type: Date,
       default: Date.now,
