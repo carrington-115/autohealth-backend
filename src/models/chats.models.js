@@ -1,16 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 
-const users = new Schema(
+const chats = new Schema(
   {
-    name: {
-      type: String,
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
     },
-    email: {
-      type: String,
-      required: true,
-    },
-    password: {
+    message: {
       type: String,
       required: true,
     },
@@ -24,6 +20,6 @@ const users = new Schema(
   }
 );
 
-const userModel = mongoose.model("users", users);
+const chatModel = mongoose.model("chats", chats);
 
-export default userModel;
+export default chatModel;
